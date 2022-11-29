@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
-
+//원본이랑 다르다는ㅓㄹ알기위 스프레드ㄴ법, map, filter(삭제할때 사용)
 import React, {useState} from 'react';
 import {SafeAreaView, StyleSheet, TextInput, View, Text, ScrollView,} from 'react-native';
 import TodoInsert from './components/TodoInsert';
@@ -17,7 +17,7 @@ const App = () => {
   
   const addTodo = text => {
     setTodos([
-      ...todos,
+      ...todos, //기존에 있는거 가져와줘 뒤에  있는거 넣어
       {id: Math.random().toString(), textValue: text, checked: false},
     ]);
   };
